@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Anggota &raquo; {{ $item->name }} &raquo; Edit
+            Pinjam &raquo; {{ $item->name }} &raquo; Edit
         </h2>
     </x-slot>
     <head>
@@ -27,39 +27,39 @@
                         </div>
                     </div>
                 @endif
-                <form class="w-full" action="{{ url('/anggota/update/' . $item->id_anggota) }}" method="post">
+                <form class="w-full" action="{{ url('/pinjam/update/' . $item->id_pinjam) }}" method="post">
                     @csrf
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">
                             <label class="block uppercase tracking-wide text-gray-700text-xs font-bold mb-2"
                                 for="grid-last-name">
-                                NIM
+                                Judul
                             </label>
-                            <input value="{{ old('nim') ?? $item->nim }}" name="nim"
+                            <input value="{{ old('judul') ?? $item->id_p }}" name="judul"
                                 class="appearance-none block w-full bg-gray-200 text-gray-700 borderborder-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-whitefocus:border-gray-500"
-                                id="grid-last-name" type="text" placeholder="edit nim">
+                                id="grid-last-name" type="text" placeholder="Masukan judul">
                         </div>
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">
                             <label class="block uppercase tracking-wide text-gray-700text-xs font-bold mb-2"
                                 for="grid-last-name">
-                                Nama
+                                Pengarang
                             </label>
-                            <input value="{{ old('nama') ?? $item->nama }}" name="nama"
+                            <input value="{{ old('pengarang') ?? $item->pengarang }}" name="pengarang"
                                 class="appearance-none block w-full bg-gray-200 text-gray-700 borderborder-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-whitefocus:border-gray-500"
-                                id="grid-last-name" type="text" placeholder="Edit nama">
+                                id="grid-last-name" type="text" placeholder="Masukan pengarang">
                         </div>
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">
                             <label class="block uppercase tracking-wide text-gray-700text-xs font-bold mb-2"
                                 for="grid-last-name">
-                                Prodi
+                                Kategori
                             </label>
-                            <input value="{{ old('prodi') ?? $item->prodi }}" name="prodi"
+                            <input value="{{ old('kategori') ?? $item->kategori }}" name="kategori"
                                 class="appearance-none block w-full bg-gray-200 text-gray-700 borderborder-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-whitefocus:border-gray-500"
-                                id="grid-last-name" type="text" placeholder="edit prodi">
+                                id="grid-last-name" type="text" placeholder="masukakn kategori">
                         </div>
                     </div>
                    
