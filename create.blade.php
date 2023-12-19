@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {!! __('Anggota &raquo; Create') !!}
+            {!! __('Pinjam &raquo; Create') !!}
         </h2>
     </x-slot>
     <head>
@@ -27,39 +27,50 @@
                         </div>
                     </div>
                 @endif
-                <form class="w-full" action="{{ url('/anggota/store') }}" method="post">
+                <form class="w-full" action="{{ url('/pinjam/store') }}" method="post">
                     @csrf
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">
                             <label class="block uppercase tracking-wide text-gray-700text-xs font-bold mb-2"
                                 for="grid-last-name">
-                                Nim
+                                ID Anggota
                             </label>
-                            <input value="{{ old('nim') }}" name="nim"
+                            <input value="{{ old('id_anggota') }}" name="id_anggota"
                                 class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200rounded py-3 px-4 leading-tight focus:outline-none focus:bg-whitefocus:border-gray-500"
-                                id="grid-last-name" type="text" placeholder="Edit Nim">
+                                id="grid-last-name" type="text" placeholder="Masukan ID">
                         </div>
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">
                             <label class="block uppercase tracking-wide text-gray-700text-xs font-bold mb-2"
                                 for="grid-last-name">
-                                Nama
+                                ID Buku
                             </label>
-                            <input value="{{ old('nama') }}" name="nama"
+                            <input value="{{ old('id_buku') }}" name="id_buku"
                                 class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200rounded py-3 px-4 leading-tight focus:outline-none focus:bg-whitefocus:border-gray-500"
-                                id="grid-last-name" type="name" placeholder="Edit Nama">
+                                id="grid-last-name" type="number" placeholder="Masukan id buku">
                         </div>
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">
                             <label class="block uppercase tracking-wide text-gray-700text-xs font-bold mb-2"
                                 for="grid-last-name">
-                                Prodi
+                                Tanggal Pinjam
                             </label>
-                            <input value="{{ old('prodi') }}" name="prodi"
+                            <input value="{{ old('tgl_pinjam') }}" name="tgl_pinjam"
                                 class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200rounded py-3 px-4 leading-tight focus:outline-none focus:bg-whitefocus:border-gray-500"
-                                id="grid-last-name" type="text" placeholder="Edit Prodi">
+                                id="grid-last-name" type="date" placeholder="Tatnggal">
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-full px-3">
+                            <label class="block uppercase tracking-wide text-gray-700text-xs font-bold mb-2"
+                                for="grid-last-name">
+                                Tanggal kembali
+                            </label>
+                            <input value="{{ old('tgl_kembali') }}" name="tgl_kembali"
+                                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200rounded py-3 px-4 leading-tight focus:outline-none focus:bg-whitefocus:border-gray-500"
+                                id="grid-last-name" type="date" placeholder="Tanggal">
                         </div>
                     </div>
                     <!-- <div class="flex flex-wrap -mx-3 mb-6">
